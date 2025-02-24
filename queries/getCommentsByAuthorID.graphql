@@ -1,0 +1,10 @@
+query GetCommentsByAuthorID($authorID: ID!) {
+  getCommentsByAuthorID(authorID: $authorID) {
+    id
+    text
+    post {
+      id
+      title
+    }
+  }
+}

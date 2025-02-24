@@ -1,0 +1,15 @@
+query GetPosts {
+  getPosts {
+    id
+    title
+    content
+    author {
+      id
+      name
+    }
+    comments {
+      id
+      text
+    }
+  }
+}

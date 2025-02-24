@@ -1,0 +1,12 @@
+query GetPostByID($id: ID!) {
+  getPostByID(id: $id) {
+    id
+    title
+    content
+    author {
+      id
+      name
+      email
+    }
+  }
+}

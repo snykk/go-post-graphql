@@ -1,0 +1,19 @@
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    name TEXT NOT NULL,
+    email TEXT UNIQUE NOT NULL
+);
+
+CREATE TABLE posts (
+    id SERIAL PRIMARY KEY,
+    title TEXT NOT NULL,
+    content TEXT NOT NULL,
+    author_id INT NOT NULL REFERENCES users(id) ON DELETE CASCADE
+);
+
+CREATE TABLE comments (
+    id SERIAL PRIMARY KEY,
+    text TEXT NOT NULL,
+    post_id INT NOT NULL REFERENCES posts(id) ON DELETE CASCADE,
+    author_id INT NOT NULL REFERENCES users(id) ON DELETE CASCADE
+);

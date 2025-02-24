@@ -1,0 +1,14 @@
+query GetCommentByID($id: ID!) {
+  getCommentByID(id: $id) {
+    id
+    text
+    post {
+      id
+      title
+    }
+    author {
+      id
+      name
+    }
+  }
+}

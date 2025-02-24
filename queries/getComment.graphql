@@ -1,0 +1,14 @@
+query GetComments {
+  getComments {
+    id
+    text
+    post {
+      id
+      title
+    }
+    author {
+      id
+      name
+    }
+  }
+}
